@@ -5,6 +5,18 @@
 # равна 13, а правая 22, и оно является счастливым билетом (т. к. 1 + 3 = 2 + 2).
 # 2 variants of solution
 
+x = input('Ticket number is => ')
+x = list(map(int, x))
+
+mid = len(x) // 2
+if len(x) % 2:
+    res = sum(x[:mid]) == sum(x[mid + 1:])
+    print(res)
+else:
+    res = sum(x[:mid]) == sum(x[mid:])
+    print(res)
+
+
 # n = int(input('Enter ticket number: '))
 # s = list(map(int, str(n)))  # use function map() to change type of variables
 # if sum(s[:2]) == sum(s[2:]):
