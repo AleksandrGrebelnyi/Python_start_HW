@@ -4,6 +4,6 @@
 # начинаться с большой буквы, за которой должны следовать маленькие.
 
 
-t = 'Sasha'
+t = input('Enter name: ')
 res = 'Valid' if t[0].isupper() and t[:].isalpha() and t[1:].islower() else 'Invalid'
 print(res)
