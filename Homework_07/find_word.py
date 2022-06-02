@@ -6,14 +6,15 @@
 # ititititit — Вовочка писал слово - «it»
 # catcatcatcat — Вовочка писал слово - «cat»
 
-t = 'catcatcatcatcat'
-res = list(map(lambda x: ord(x), t))
-sp = []
-for item in res:
-    if item in sp:
+
+s = 'bbbabbbabbba'
+for i in range(1, len(s) // 2):
+    pattern = s[:i]
+    if s.count(pattern) * len(pattern) == len(s):
+        print(pattern)
         break
-    else:
-        sp.append(item)
-print(res)
-k = ''.join(list(map(lambda x: chr(x), sp)))
-print(k)
+else:
+    print('Error')
+
+
+
